@@ -1,0 +1,90 @@
+.image-container {
+    display: flex;
+    display: inline-block;
+    gap: 9px; /* Ajusta el espacio entre las imágenes según sea necesario */
+    overflow-x: auto;
+    border-color: rgb(78, 78, 78);
+    margin: 5%;
+    padding: 2%;
+
+
+}
+p{
+    padding: 1%;
+    margin: 1%;
+}
+body{
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+    margin: 10%;
+    width: 70%;
+    height: 80%;
+    background-color:rgb(100, 92, 105);
+    padding: 5%;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.texto1{
+    padding: 5%;
+    margin: 1%;
+    background-color: rgb(136, 128, 128);
+    font-size: large;
+    font-style: sans-serif;
+    display: inline-table;
+    height: 50%;
+    width: 50%;
+    text-align: left;
+}
+
+
+
+
+.separador{
+    height: 1px;
+    background-color: rgb(56, 94, 131);
+    border-color: black;
+    margin: 2%;
+    
+}
+
+.icono {
+    display: inline-block;
+    border: none;
+    margin: 2px;
+    padding: 1px;
+    max-width: 40px; /* Ajusta el tamaño máximo de las imágenes */
+    height: 40px; /* Mantiene la proporción de la imagen */
+}
+.imgProyecto1{
+    display: flex;
+    display: inline-block;
+    max-width: 100px;
+}
+.titulo1{
+    margin: 1%;
+    padding: 1%;
+    font-size: x-large;
+    font: sans-serif;
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+    
+}
+.titulo2{
+    margin: 1%;
+    padding: 1%;
+    font-size: x-large;
+    font: sans-serif;
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+}
+
+html{
+    background-image: url(5072616.jpg);
+    background-size: cover
+}
