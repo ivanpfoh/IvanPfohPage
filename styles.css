@@ -87,7 +87,7 @@ img:hover{
     padding: 1px;
     max-width: 40px; /* Ajusta el tamaño máximo de las imágenes */
     height: 40px; /* Mantiene la proporción de la imagen */
-}
+    }
 .imgProyecto1{
     display: flex;
     display: inline-block;
@@ -201,14 +201,12 @@ html{
 
 /* Estilo para los párrafos */
 p {
-    font-size: 1.5em;
-    opacity: 0; /* Los párrafos estarán invisibles al principio */
-    transform: translateY(50px); /* Comienzan desde abajo */
-    transition: opacity 1s ease, transform 1s ease; /* Animación de desvanecimiento y deslizamiento */
+    opacity: 0;
+    transform: translateX(90px); /* Deslizar desde la derecha */
+    transition: opacity 3s ease, transform 3s ease;
 }
 
-/* Clase activa que se añade cuando el párrafo entra en la vista */
 .aparecer {
-    opacity: 1; /* Se hace visible */
-    transform: translateY(0); /* Vuelve a su posición original */
+    opacity: 1;
+    transform: translateX(0);
 }
