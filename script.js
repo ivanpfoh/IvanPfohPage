@@ -60,3 +60,47 @@ const elementos = document.querySelectorAll('p');
 elementos.forEach(elemento => {
     observer.observe(elemento);
 });
+
+
+function smoothScroll(target) {
+    const targetElement = document.getElementById(target);
+    const targetPosition = targetElement.offsetTop; // Obtiene la posición del destino
+    const startPosition = window.pageYOffset; // Posición actual de la página
+    const distance = targetPosition - startPosition; // Distancia total a recorrer
+    const duration = 1000; // Duración de la animación (en milisegundos)
+    let startTime = null;
+
+    // Función de animación
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const progress = currentTime - startTime;
+        const run = easeInOutCubic(progress, startPosition, distance, duration);
+
+        window.scrollTo(0, run);
+
+        if (progress < duration) {
+            requestAnimationFrame(animation); // Continuar la animación hasta completar la duración
+        }
+    }
+
+    // Función de easing para suavizar el desplazamiento
+    function easeInOutCubic(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t * t + b;
+        t -= 2;
+        return c / 2 * (t * t * t + 2) + b;
+    }
+
+    // Iniciar la animación
+    requestAnimationFrame(animation);
+}
+
+// Seleccionamos los enlaces del menú
+const links = document.querySelectorAll('nav a');
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevenir el comportamiento por defecto
+        const target = link.getAttribute('href').substring(1);
+        smoothScroll(target);
+    });
+});

@@ -1,3 +1,8 @@
+html{
+    background-image: url(5072616.jpg);
+    background-size: cover;
+    scroll-behavior: smooth;
+}
 .image-container {
     display: flex;
     display: inline-block;
@@ -110,10 +115,7 @@ img:hover{
     font: sans-serif;
 }
 
-html{
-    background-image: url(5072616.jpg);
-    background-size: cover
-}
+
 .popup {
     display: none; /* Oculto por defecto */
     position: fixed;
