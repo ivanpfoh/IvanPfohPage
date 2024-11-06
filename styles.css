@@ -9,6 +9,34 @@
 
 
 }
+nav{
+    text-align: center;
+}
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el espaciado por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+nav ul li:hover{
+    border-radius: 10px;
+    transform: scale(1.2);
+    background-color:rgb(113, 107, 117);
+}
+nav ul li {
+    display: inline-block; /* Coloca los elementos en línea */
+    margin-right: 20px; /* Espaciado entre los elementos de la lista */
+    margin-left: 22px;
+    font-size: large;
+    padding: 0.5%
+}
+
+nav a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #141414ee; /* Establece un color para los enlaces */
+    font-family: Constantia, sans-serif; /* Puedes cambiar la fuente si lo deseas */
+}
+
 p{
     padding: 1%;
     margin: 1%;
@@ -22,6 +50,7 @@ body{
     height: 80%;
     background-color:rgb(100, 92, 105);
     padding: 5%;
+    text-align: center;
 }
 
 img:hover{
@@ -29,8 +58,8 @@ img:hover{
 }
 
 .texto1{
-    padding: 5%;
-    margin: 1%;
+    padding: 1%;
+    margin: 0.5%;
     background-color: rgb(136, 128, 128);
     font-size: large;
     font-style: sans-serif;
@@ -38,9 +67,9 @@ img:hover{
     height: 50%;
     width: 50%;
     text-align: left;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
 }
-
-
 
 
 .separador{
@@ -67,11 +96,11 @@ img:hover{
 .titulo1{
     margin: 1%;
     padding: 1%;
-    font-size: x-large;
-    font: sans-serif;
-    display: flex;
-    display: inline-block;
-    justify-content: center;
+    font-size: xx-large;
+    font-family: inherit, sans-serif;
+    
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     
 }
 .titulo2{
@@ -79,12 +108,107 @@ img:hover{
     padding: 1%;
     font-size: x-large;
     font: sans-serif;
-    display: flex;
-    display: inline-block;
-    justify-content: center;
 }
 
 html{
     background-image: url(5072616.jpg);
     background-size: cover
+}
+.popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para el mensaje de "Correo copiado" */
+.mensaje-copiado {
+    display: none; /* Oculto por defecto */
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    z-index: 1100;
+}
+
+/* Estilos para el botón de copiar */
+#copiar-email {
+    margin-top: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#copiar-email:hover {
+    background-color: #0056b3;
+}
+
+.animar {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cuando el elemento se ha activado, la animación entra en acción */
+.animado {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content {
+    height: 100vh; /* Cada bloque tendrá una altura de pantalla completa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilo para los párrafos */
+p {
+    font-size: 1.5em;
+    opacity: 0; /* Los párrafos estarán invisibles al principio */
+    transform: translateY(50px); /* Comienzan desde abajo */
+    transition: opacity 1s ease, transform 1s ease; /* Animación de desvanecimiento y deslizamiento */
+}
+
+/* Clase activa que se añade cuando el párrafo entra en la vista */
+.aparecer {
+    opacity: 1; /* Se hace visible */
+    transform: translateY(0); /* Vuelve a su posición original */
 }

@@ -3,45 +3,69 @@
     <head>
         <title>Ivan Pfoh</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
     </head>
     
     
     
-    <body>
-        <h1 class="titulo1">Ivan Pfoh</h1>
-        <h1 class="titulo1">|</h1>
+    <body id="home">
+        <nav>
+            <ul>
+                <li><a href="#home" ><strong>Home</strong></a></li>
+                <li><a href="#proyectos" ><strong>Proyectos</strong></a></li>
+                <li><a href="#contacto" ><strong>Contacto</strong></a></li>
+            </ul>
+        </nav>
+        <h1 class="titulo1" >Ivan Pfoh</h1>
         <h1 class="titulo1">Analista de Sistemas</h1>
         <hr class="separador">
         
-        <div>
+        <div >
+            <h1>Sobre mí:</h1>
             <p class="texto1">
-            <strong>    
-                Sobre mí:
-                Desde pequeño tengo un gran entusiasmo por las computadoras. Utilizo Windows como sistema operativo principal desde los 7 años y, durante mi adolescencia, comencé a profundizar en la parte del hardware. Mi curiosidad sobre el funcionamiento interno de las computadoras me llevó a aprender y realizar reparaciones por mi cuenta, además de haber cursado un curso de diagnóstico y mantenimiento de PC. 
-                Actualmente estudio la Tecnicatura en Análisis de Sistemas.
-            <strong>
+                <strong>    
+                    Desde pequeño tengo un gran entusiasmo por las computadoras.
+                </strong>
+            </p>
+            <p class="texto1"> 
+                <strong>Utilizo Windows como sistema operativo principal desde los 7 años y, durante mi adolescencia, comencé a profundizar en la parte del hardware.</strong>
+            </p>
+            <p class="texto1">
+                <strong>Mi curiosidad sobre el funcionamiento interno de las computadoras me llevó a aprender y realizar reparaciones por mi cuenta, además de haber cursado un curso de diagnóstico y mantenimiento de PC.</strong>
+            </p>
+            <p class="texto1">
+                <strong>Actualmente estudio la Tecnicatura en Análisis de Sistemas.</strong>
+            </p>
+        </div>
 
-    </div>
     <hr class="separador">
-    <div>
-        <h2 class="titulo2">Proyectos:</h2>
-    </div class="Proyeto1">
-        <h3>Proyecto de control de stock</h3>
-        <img src="stockimg.png" alt="Imagen de pryecto de stock" target="_blank" class="imgProyecto1">
-        <button id="miBoton">Haz clic aquí</button>
-        <Script src="script.js"></Script>
-    </div>
 
+        <div id="proyectos" class="proyectos">
+            <h1 class="titulo2">Proyectos:</h1>
+            <h2>Proyecto de control de stock</h2>
+            <a href="https://github.com/ivanpfoh/Proyecto-control-de-stock" target="_blank"><img src="stockimg.png" alt="Imagen de pryecto de stock" class="imgProyecto1"></a>
+        </div>
 
+    <hr class="separador">
+        <div>
+            <h1>Lenguajes utilizados</h1>
+            <div>
+                <img src="piton.png" alt="Icono de python" class="icono">
+                <img src="html-5.png" alt="Icono de hmtl" class="icono">
+                <img src="css-3.png" alt="Icono de css" class="icono">
+                <img src="js.png" alt="Icono de javascript" class="icono">
+                <img src="base-de-datos.png" alt="Icono de sql" class="icono">
+                <img src="mysql.png" alt="Icono de mysql" class="icono">
+            </div>
 
-    
+        </div>
         
     </body>
+
     <hr class="separador">
 
-    
-    <footer>
+    <footer id="contacto">
         
         
         <fieldset class="image-container">
@@ -50,6 +74,23 @@
             <a href="https://github.com/ivanpfoh" target="_blank"><img src="github.png" alt="Icono de github" class="icono"></a>
             <a href="https://instagram.com/pfohardware" target="_blank"><img src="instagram.png" alt="Icono de instagram" class="icono"></a> 
             <a href="https://www.youtube.com/@pfohardware4105" target="_blank"><img src="youtube.png" alt="Icono de youtube" class="icono"></a>
+            <img src="email (1).png" alt="imagen email" id="mi-imagen" style="cursor: pointer;" class="icono">
+
+            <!-- Miniventana que aparece con el email -->
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close" id="cerrar-popup">&times;</span>
+                    <p id="email">ivanpfohh@85gmail.com</p>
+                    <button id="copiar-email">Copiar</button>
+                </div>
+            </div>
+
+            <!-- Mensaje que aparece cuando se copia el email -->
+            <div id="mensaje-copiado" class="mensaje-copiado">
+                Correo copiado al portapapeles
+            </div>
         </fieldset>
+
+        <script src="script.js"></script>
     </footer>
 </html>
