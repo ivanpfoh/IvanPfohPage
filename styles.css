@@ -3,17 +3,29 @@ html{
     background-size: cover;
     scroll-behavior: smooth;
 }
+body{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 10%;
+    width: 70%;
+    height: 80%;
+    background-color:rgb(100, 92, 105);
+    padding: 5%;
+    text-align: center;
+}
+
 .image-container {
     display: flex;
-    display: inline-block;
-    gap: 9px; /* Ajusta el espacio entre las imágenes según sea necesario */
-    overflow-x: auto;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
     border-color: rgb(78, 78, 78);
     margin: 4%;
     padding: 1%;
     border-radius: 5%;
 
 }
+
 nav{
     text-align: center;
 }
@@ -46,20 +58,13 @@ p{
     padding: 1%;
     margin: 1%;
 }
-body{
-    display: flex;
-    display: inline-block;
-    justify-content: center;
-    margin: 10%;
-    width: 70%;
-    height: 80%;
-    background-color:rgb(100, 92, 105);
-    padding: 5%;
-    text-align: center;
-}
-
 img:hover{
     transform: scale(1.1);
+}
+.contenedortexto{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 .texto1{
@@ -68,12 +73,25 @@ img:hover{
     background-color: rgb(136, 128, 128);
     font-size: large;
     font-style: sans-serif;
-    display: inline-table;
+    text-align: center;
+    justify-content: flex-end;
     height: 50%;
     width: 50%;
-    text-align: left;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     border-radius: 5%;
+}
+.texto2{
+    padding: 1%;
+    text-align: center;
+    margin: 0.5%;
+    background-color: rgb(136, 128, 128);
+    font-size: large;
+    font-style: sans-serif;
+    justify-content: flex-start;
+    height: 50%;
+    width: 50%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 5%; 
 }
 
 
@@ -86,17 +104,27 @@ img:hover{
 }
 
 .icono {
-    display: inline-block;
     border: none;
     margin: 2px;
     padding: 1px;
     max-width: 40px; /* Ajusta el tamaño máximo de las imágenes */
     height: 40px; /* Mantiene la proporción de la imagen */
     }
-.imgProyecto1{
-    display: flex;
+
+.iconos{
     display: inline-block;
+}
+.imgProyecto1{
+    margin: 3%;
+    padding: 3%;
     max-width: 100px;
+}
+.proyecto1{
+    align-content: center;
+}
+.proyectos{
+    display: flex;
+    justify-content: center;
 }
 .titulo1{
     margin: 1%;

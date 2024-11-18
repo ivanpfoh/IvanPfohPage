@@ -21,31 +21,31 @@
         <h1 class="titulo1" >Ivan Pfoh</h1>
         <h1 class="titulo1">Analista de Sistemas</h1>
         <hr class="separador">
-        
-        <div >
-            <h1>Sobre mí</h1>
+        <h1>Sobre mí</h1>
+        <div class="contenedortexto">
             <p class="texto1">
                 <strong>    
                     Desde pequeño tengo un gran entusiasmo por las computadoras.
                 </strong>
             </p>
-            <p class="texto1"> 
+            <p class="texto2"> 
                 <strong>Utilizo Windows como sistema operativo principal desde los 7 años y, durante mi adolescencia, comencé a profundizar en la parte del hardware.</strong>
             </p>
             <p class="texto1">
                 <strong>Mi curiosidad sobre el funcionamiento interno de las computadoras me llevó a aprender y realizar reparaciones por mi cuenta, además de haber cursado un curso de diagnóstico y mantenimiento de PC.</strong>
             </p>
-            <p class="texto1">
+            <p class="texto2">
                 <strong>Actualmente estudio la Tecnicatura en Análisis de Sistemas.</strong>
             </p>
         </div>
 
     <hr class="separador">
-
+    <h1 class="titulo2">Proyectos</h1>
         <div id="proyectos" class="proyectos">
-            <h1 class="titulo2">Proyectos</h1>
-            <h2>Proyecto de control de stock</h2>
-            <a href="https://github.com/ivanpfoh/Proyecto-control-de-stock" target="_blank"><img src="stockimg.png" alt="Imagen de pryecto de stock" class="imgProyecto1"></a>
+            <div class="proyecto1">
+                <h2>Proyecto de control de stock</h2>
+                <a href="https://github.com/ivanpfoh/Proyecto-control-de-stock" target="_blank"><img src="stockimg.png" alt="Imagen de pryecto de stock" class="imgProyecto1"></a>
+            </div>
         </div>
 
     <hr class="separador">
@@ -72,12 +72,13 @@
         <fieldset class="image-container">
             <h3>Gracias por visitar mi sitio web.</h3>
             <h3>Mi contacto</h3>
-            <a href="https://github.com/ivanpfoh" target="_blank"><img src="github.png" alt="Icono de github" class="icono"></a>
-            <a href="https://instagram.com/pfohardware" target="_blank"><img src="instagram.png" alt="Icono de instagram" class="icono"></a> 
-            <a href="https://www.youtube.com/@pfohardware4105" target="_blank"><img src="youtube.png" alt="Icono de youtube" class="icono"></a>
-            <img src="email (1).png" alt="imagen email" id="mi-imagen" style="cursor: pointer;" class="icono">
+            <div class="iconos">
+                <a href="https://github.com/ivanpfoh" target="_blank"><img src="github.png" alt="Icono de github" class="icono"></a>
+                <a href="https://instagram.com/pfohardware" target="_blank"><img src="instagram.png" alt="Icono de instagram" class="icono"></a> 
+                <a href="https://www.youtube.com/@pfohardware4105" target="_blank"><img src="youtube.png" alt="Icono de youtube" class="icono"></a>
+                <img src="email (1).png" alt="imagen email" id="mi-imagen" style="cursor: pointer;" class="icono">
+            </div>
 
-            <!-- Miniventana que aparece con el email -->
             <div id="popup" class="popup">
                 <div class="popup-content">
                     <span class="close" id="cerrar-popup">&times;</span>
@@ -86,7 +87,6 @@
                 </div>
             </div>
 
-            <!-- Mensaje que aparece cuando se copia el email -->
             <div id="mensaje-copiado" class="mensaje-copiado">
                 Correo copiado al portapapeles
             </div>
